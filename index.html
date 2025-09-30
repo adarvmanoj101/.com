@@ -165,32 +165,19 @@
 <body>
 
   <!-- Header -->
-  <header class="py-3 shadow-sm" style="background: rgba(0,0,0,0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1);">
-  <div class="container d-flex flex-wrap justify-content-between align-items-center">
+<header class="py-3 shadow-sm" style="background: rgba(0,0,0,0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1);">
+  <div class="container d-flex justify-content-between align-items-center">
     <h1 class="m-0" style="color:#fff; font-weight:700;">Adarv Manoj</h1>
 
-    <!-- Mobile Menu Button -->
-    <button class="navbar-toggler d-md-none" type="button" onclick="toggleMenu()" style="background:none; border:none; color:#fff; font-size:1.5rem;">
-      ☰
-    </button>
-
-    <!-- Nav Links -->
-    <nav id="navbarMenu" class="d-none d-md-flex gap-3 align-items-center mt-2 mt-md-0 flex-column flex-md-row text-center">
-      <a href="#home" class="nav-link px-2 text-white">Home</a>
-      <a href="#about" class="nav-link px-2 text-white">About</a>
-      <a href="#services" class="nav-link px-2 text-white">Services</a>
-      <a href="#contact" class="nav-link px-2 text-white">Contact</a>
+    <!-- Desktop Nav Links -->
+    <nav class="d-flex gap-4 align-items-center text-center">
+      <a href="#home" class="nav-link text-white">Home</a>
+      <a href="#about" class="nav-link text-white">About</a>
+      <a href="#services" class="nav-link text-white">Services</a>
+      <a href="#contact" class="nav-link text-white">Contact</a>
     </nav>
   </div>
 </header>
-
-<script>
-function toggleMenu() {
-  const menu = document.getElementById('navbarMenu');
-  menu.classList.toggle('d-none'); // show/hide menu
-  menu.classList.toggle('flex-column'); // stack links vertically
-}
-</script>
 
 <style>
 /* Nav underline hover animation */
@@ -198,6 +185,7 @@ header nav a {
   position: relative;
   text-decoration: none;
   transition: color 0.3s ease;
+  font-weight: 500;
 }
 
 header nav a:hover {
@@ -208,34 +196,21 @@ header nav a::after {
   content: '';
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 3px;
   background: #00aa00;
   left: 50%;
   bottom: -4px;
-  transition: all 0.3s ease;
+  transition: width 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
   transform: translateX(-50%);
 }
 
 header nav a:hover::after {
   width: 60%;
-}
-
-/* Mobile menu styling */
-@media (max-width: 768px) {
-  #navbarMenu {
-    background: rgba(0,0,0,0.95);
-    width: 100%;
-    padding: 1rem 0;
-    border-top: 1px solid rgba(255,255,255,0.1);
-  }
-
-  #navbarMenu a {
-    display: block;
-    padding: 0.5rem 0;
-    font-size: 1.1rem;
-  }
+  opacity: 1;
 }
 </style>
+
 
 
   <!-- Hero Section -->
