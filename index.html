@@ -528,14 +528,52 @@ header nav a:hover::after {
 
   <!-- Social Section -->
   <section class="bg-secondary text-white py-5">
-    <div class="container text-center">
-      <h3>Want to see more of what I do?</h3>
-      <p style="color:var(--muted)">Explore my projects and updates on LinkedIn, GitHub, and Instagram.</p>
-      <a href="https://www.linkedin.com/in/adarv-manoj-bb97222a1/" class="btn btn-light btn-sm mt-3 me-2" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://github.com/adarvmanoj101" class="btn btn-light btn-sm mt-3 me-2" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://www.instagram.com/kannan_tm_/" class="btn btn-light btn-sm mt-3" target="_blank" rel="noopener noreferrer">Instagram</a>
-    </div>
-  </section>
+  <div class="container text-center">
+    <h3>Want to see more of what I do?</h3>
+    <p style="color:var(--muted)">Explore my projects and updates on LinkedIn, GitHub, and Instagram.</p>
+    
+    <!-- Social Icons -->
+    <a href="https://www.linkedin.com/in/adarv-manoj-bb97222a1/" target="_blank" rel="noopener noreferrer" class="social-icon me-3">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="linkedin">
+    </a>
+
+    <a href="https://github.com/adarvmanoj101" target="_blank" rel="noopener noreferrer" class="social-icon me-3">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="github">
+    </a>
+
+    <a href="https://www.instagram.com/kannan_tm_/" target="_blank" rel="noopener noreferrer" class="social-icon">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" class="instagram">
+    </a>
+  </div>
+</section>
+
+<style>
+.social-icon img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Brand colors */
+.linkedin {
+  filter: invert(28%) sepia(85%) saturate(3863%) hue-rotate(197deg) brightness(95%) contrast(101%);
+}
+
+.github {
+  filter: invert(0%); /* Black */
+}
+
+.instagram {
+  filter: invert(34%) sepia(100%) saturate(7000%) hue-rotate(325deg) brightness(95%) contrast(95%);
+}
+
+/* Hover effects */
+.social-icon:hover img {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+</style>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
